@@ -43,6 +43,8 @@ img, video, canvas { max-width: 100%; }
 .viewer-note { font-size: 0.85rem; text-align: justify; }
 
 ul.intro { font-size: 1.1rem; }
+/* Bulma removes paragraph margins, so the note gets its own spacing. */
+.browser-note { margin: 1rem 0 1.5rem; }
 .memo-nav a { margin-right: 1rem; }
 .compare { margin-bottom: 1.5rem; }
 /* The player's own rules come later in the page and set fixed pixel sizes
