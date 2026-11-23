@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Mesh for Every Moment: comparison videos</title>
+<meta name="description" content="MEMO reconstructs the geometry of complete dynamic scenes from multi-view video and extracts a mesh at every frame.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/bulma.min.css">
+<link rel="stylesheet" href="static/css/index.css">
+<link rel="stylesheet" href="static/css/memo.css?v=5c2dd187be">
+<script defer src="static/js/fontawesome.all.min.js"></script>
+</head>
+<body>
+<section class="hero">
+<div class="hero-body">
+<div class="container is-max-desktop has-text-centered">
+<h1 class="title is-1 publication-title"><a href="index.html" class="memo-home">A Mesh for Every Moment</a></h1>
+<div class="is-size-5 publication-authors"><span class="author-block"><a href="https://homes.cs.washington.edu/~royorel/" target="_blank">Roy Or-El</a><sup>1</sup></span>, <span class="author-block"><a href="https://jjparkcv.github.io/" target="_blank">Jeong Joon Park</a><sup>2</sup></span>, <span class="author-block"><a href="https://www.irakemelmacher.com/" target="_blank">Ira Kemelmacher-Shlizerman</a><sup>1</sup></span></div>
+<div class="is-size-5 publication-authors"><span class="author-block"><sup>1</sup>University of Washington</span> &nbsp; <span class="author-block"><sup>2</sup>University of Michigan</span></div>
+<div class="publication-links"><span class="link-block"><a href="index.html" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-home"></i></span><span>Main Page</span></a></span></div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container is-max-desktop content">
+<ul class="intro">
+<li>Each video shows the Gaussian render on the left and the mesh extracted at every frame on the right, shaded above and as normals below.</li>
+<li>Drag across a video to move the split. MEMO is on its left and the chosen baseline on its right, in every panel.</li>
+<li>The baseline method buttons choose the method compared with MEMO.</li>
+<li>The videos are encoded with AV1 and play in Chrome, Firefox, and Edge.</li>
+</ul>
+<nav class="memo-nav"><a href="#blender_moments">Blender-Moments</a> <a href="#n3d">Neural 3D Video</a> <a href="#selfcap">SelfCap</a></nav>
+</div>
+</section>
+<section class="section" id="blender_moments">
+<div class="container is-max-desktop">
+<h2 class="title is-3">Blender-Moments</h2>
+<h3>Alligator</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;blender_moments&quot;, &quot;scene&quot;: &quot;alligator&quot;, &quot;panels&quot;: [[0, 0, 800, 800], [800, 0, 400, 400], [800, 400, 400, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;], [&quot;dg_mesh_sig05&quot;, &quot;DG-Mesh&quot;], [&quot;gt&quot;, &quot;Ground truth&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Beetle</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;blender_moments&quot;, &quot;scene&quot;: &quot;beetle&quot;, &quot;panels&quot;: [[0, 0, 800, 800], [800, 0, 400, 400], [800, 400, 400, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;], [&quot;dg_mesh_sig05&quot;, &quot;DG-Mesh&quot;], [&quot;gt&quot;, &quot;Ground truth&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Bicycle</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;blender_moments&quot;, &quot;scene&quot;: &quot;bicycle&quot;, &quot;panels&quot;: [[0, 0, 800, 800], [800, 0, 400, 400], [800, 400, 400, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;], [&quot;dg_mesh_sig05&quot;, &quot;DG-Mesh&quot;], [&quot;gt&quot;, &quot;Ground truth&quot;]], &quot;levels&quot;: [[&quot;High&quot;, 40]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Book</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;blender_moments&quot;, &quot;scene&quot;: &quot;book&quot;, &quot;panels&quot;: [[0, 0, 800, 800], [800, 0, 400, 400], [800, 400, 400, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;], [&quot;dg_mesh_sig05&quot;, &quot;DG-Mesh&quot;], [&quot;gt&quot;, &quot;Ground truth&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Elephant</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;blender_moments&quot;, &quot;scene&quot;: &quot;elephant&quot;, &quot;panels&quot;: [[0, 0, 800, 800], [800, 0, 400, 400], [800, 400, 400, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;], [&quot;dg_mesh_sig05&quot;, &quot;DG-Mesh&quot;], [&quot;gt&quot;, &quot;Ground truth&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Ficus</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;blender_moments&quot;, &quot;scene&quot;: &quot;ficus_4d&quot;, &quot;panels&quot;: [[0, 0, 800, 800], [800, 0, 400, 400], [800, 400, 400, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;], [&quot;dg_mesh_sig05&quot;, &quot;DG-Mesh&quot;], [&quot;gt&quot;, &quot;Ground truth&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Lego</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;blender_moments&quot;, &quot;scene&quot;: &quot;lego_4d&quot;, &quot;panels&quot;: [[0, 0, 800, 800], [800, 0, 400, 400], [800, 400, 400, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;], [&quot;dg_mesh_sig05&quot;, &quot;DG-Mesh&quot;], [&quot;gt&quot;, &quot;Ground truth&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Spiderman</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;blender_moments&quot;, &quot;scene&quot;: &quot;spiderman&quot;, &quot;panels&quot;: [[0, 0, 800, 800], [800, 0, 400, 400], [800, 400, 400, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;], [&quot;dg_mesh_sig05&quot;, &quot;DG-Mesh&quot;], [&quot;gt&quot;, &quot;Ground truth&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Toyota</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;blender_moments&quot;, &quot;scene&quot;: &quot;toyota&quot;, &quot;panels&quot;: [[0, 0, 800, 800], [800, 0, 400, 400], [800, 400, 400, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;], [&quot;dg_mesh_sig05&quot;, &quot;DG-Mesh&quot;], [&quot;gt&quot;, &quot;Ground truth&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+</div>
+</section>
+<section class="section" id="n3d">
+<div class="container is-max-desktop">
+<h2 class="title is-3">Neural 3D Video</h2>
+<h3>Coffee martini</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;n3d&quot;, &quot;scene&quot;: &quot;coffee_martini&quot;, &quot;panels&quot;: [[0, 0, 1066, 800], [1066, 0, 533, 400], [1066, 400, 533, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Cut roasted beef</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;n3d&quot;, &quot;scene&quot;: &quot;cut_roasted_beef&quot;, &quot;panels&quot;: [[0, 0, 1066, 800], [1066, 0, 533, 400], [1066, 400, 533, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Flame salmon</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;n3d&quot;, &quot;scene&quot;: &quot;flame_salmon_1&quot;, &quot;panels&quot;: [[0, 0, 1066, 800], [1066, 0, 533, 400], [1066, 400, 533, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Cook spinach</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;n3d&quot;, &quot;scene&quot;: &quot;cook_spinach&quot;, &quot;panels&quot;: [[0, 0, 1066, 800], [1066, 0, 533, 400], [1066, 400, 533, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Flame steak</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;n3d&quot;, &quot;scene&quot;: &quot;flame_steak&quot;, &quot;panels&quot;: [[0, 0, 1066, 800], [1066, 0, 533, 400], [1066, 400, 533, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Sear steak</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;n3d&quot;, &quot;scene&quot;: &quot;sear_steak&quot;, &quot;panels&quot;: [[0, 0, 1066, 800], [1066, 0, 533, 400], [1066, 400, 533, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+</div>
+</section>
+<section class="section" id="selfcap">
+<div class="container is-max-desktop">
+<h2 class="title is-3">SelfCap</h2>
+<h3>Hair1</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;selfcap&quot;, &quot;scene&quot;: &quot;hair1&quot;, &quot;panels&quot;: [[0, 0, 1448, 800], [1448, 0, 724, 400], [1448, 400, 724, 400]], &quot;rate&quot;: 0.25, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Hair2</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;selfcap&quot;, &quot;scene&quot;: &quot;hair2&quot;, &quot;panels&quot;: [[0, 0, 1448, 800], [1448, 0, 724, 400], [1448, 400, 724, 400]], &quot;rate&quot;: 0.25, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Corgi1</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;selfcap&quot;, &quot;scene&quot;: &quot;corgi1&quot;, &quot;panels&quot;: [[0, 0, 1442, 800], [1442, 0, 721, 400], [1442, 400, 721, 400]], &quot;rate&quot;: 0.25, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Corgi2</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;selfcap&quot;, &quot;scene&quot;: &quot;corgi2&quot;, &quot;panels&quot;: [[0, 0, 1442, 800], [1442, 0, 721, 400], [1442, 400, 721, 400]], &quot;rate&quot;: 0.25, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Bike1</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;selfcap&quot;, &quot;scene&quot;: &quot;bike1&quot;, &quot;panels&quot;: [[0, 0, 798, 800], [798, 0, 399, 400], [798, 400, 399, 400]], &quot;rate&quot;: 0.25, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;]], &quot;levels&quot;: [[&quot;High&quot;, 40]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Bike2</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;selfcap&quot;, &quot;scene&quot;: &quot;bike2&quot;, &quot;panels&quot;: [[0, 0, 798, 800], [798, 0, 399, 400], [798, 400, 399, 400]], &quot;rate&quot;: 0.25, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;]], &quot;levels&quot;: [[&quot;High&quot;, 40]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+<h3>Yoga</h3>
+<div class="compare" data-cfg='{&quot;dataset&quot;: &quot;selfcap&quot;, &quot;scene&quot;: &quot;yoga&quot;, &quot;panels&quot;: [[0, 0, 1446, 800], [1446, 0, 723, 400], [1446, 400, 723, 400]], &quot;rate&quot;: 1, &quot;methods&quot;: [[&quot;memo&quot;, &quot;MEMO&quot;], [&quot;4dgs&quot;, &quot;4DGS&quot;], [&quot;deformable_3dgs&quot;, &quot;Deformable-3DGS&quot;], [&quot;sc_gs&quot;, &quot;SC-GS&quot;], [&quot;freetimegs&quot;, &quot;FreeTimeGS&quot;], [&quot;ast_3dgs&quot;, &quot;AST-3DGS&quot;], [&quot;d2dgs&quot;, &quot;D-2DGS&quot;]], &quot;levels&quot;: [[&quot;Medium&quot;, 50]], &quot;outputs&quot;: null}'>
+<canvas></canvas>
+<div class="bar transport"><button type="button" class="play" aria-label="Play">&#9654;</button><input type="range" min="0" max="1000" value="0"><button type="button" class="full">Full screen</button></div>
+<div class="bar bar-method"><span>Baseline method</span></div>
+<div class="bar bar-speed"><span>Playback speed</span></div>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="container"><div class="columns is-centered"><div class="column is-8"><div class="content">
+<p>This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</div></div></div></div>
+</footer>
+<style>
+.compare canvas { display: block; width: 100%; background: #ffffff; cursor: ew-resize; touch-action: none; }
+.compare .bar { margin-top: 6px; font-size: 14px; }
+.compare .bar span { margin-right: 6px; color: #555555; font-weight: bold; }
+.compare .bar button { font: inherit; font-size: 14px; padding: 2px 10px; margin: 0 6px 4px 0; border: 1px solid #999999; border-radius: 4px; background: #ffffff; color: #1a1a1a; cursor: pointer; }
+.compare .bar button.on { background: #1a1a1a; color: #ffffff; border-color: #1a1a1a; }
+.compare .bar input[type=range] { width: 60%; vertical-align: middle; }
+.compare .bar.transport { display: flex; align-items: center; gap: 8px; }
+.compare .bar.transport input[type=range] { flex: 1; width: auto; }
+.compare .bar button.play { width: 40px; margin: 0; padding: 2px 0; font-size: 15px; line-height: 1.4; }
+.compare .bar button.full { margin: 0; }
+.compare:fullscreen { background: #ffffff; padding: 16px; box-sizing: border-box; overflow: auto; }
+.compare:fullscreen canvas { margin: 0 auto; }
+</style>
+<script>
+document.querySelectorAll(".compare").forEach(function (block) {
+  var cfg = JSON.parse(block.dataset.cfg);
+  var canvas = block.querySelector("canvas"), ctx = canvas.getContext("2d");
+  var memo = document.createElement("video"), other = document.createElement("video");
+  // The page loops both videos itself, together. The AV1 encodes hold one
+  // keyframe, so a seek decodes from the start, and two videos looping on
+  // their own drift apart at the wrap and stall in repeated sync seeks.
+  [memo, other].forEach(function (v) { v.muted = true; v.loop = false; v.playsInline = true; v.preload = "auto"; });
+  // Only scenes on screen load, play, and draw, so a page of many scenes
+  // decodes one or two at a time. A scene loads and shows its first frame
+  // but waits for the play button. `wanted` is the play button's state, kept
+  // while a scene is off screen. Until its video loads, the canvas takes the
+  // frame's size from the panels, so the page does not shift as scenes load.
+  var visible = false, wanted = false;
+  canvas.width = Math.max.apply(null, cfg.panels.map(function (b) { return b[0] + b[2]; }));
+  canvas.height = Math.max.apply(null, cfg.panels.map(function (b) { return b[1] + b[3]; }));
+  var otherReady = false;
+  other.addEventListener("loadeddata", function () { otherReady = true; });
+  memo.addEventListener("ended", function () {
+    memo.currentTime = 0; memo.play();
+    if (other.src) { other.currentTime = 0; other.play(); }
+  });
+  var state = {method: cfg.methods.length > 1 ? cfg.methods[1][0] : "memo", level: cfg.levels[0][1],
+               output: cfg.outputs ? cfg.outputs[0][0] : null, split: 0.5, rate: cfg.rate};
+  var scrub = block.querySelector("input"), otherName = "";
+  function src(method) {
+    return "videos/" + cfg.dataset + "/" + cfg.scene + "/" + method +
+      (state.output ? "_" + state.output : "") + "_crf" + state.level + ".mp4";
+  }
+  function panels() { return state.output ? [[0, 0, memo.videoWidth, memo.videoHeight]] : cfg.panels; }
+  function load() {
+    var t = memo.currentTime || 0;
+    memo.src = src("memo");
+    otherReady = false;
+    other.src = state.method === "memo" ? "" : src(state.method);
+    memo.onloadedmetadata = function () {
+      canvas.width = memo.videoWidth; canvas.height = memo.videoHeight;
+      memo.currentTime = Math.min(t, memo.duration || t);
+      [memo, other].forEach(function (v) { v.playbackRate = state.rate; });
+      if (wanted && visible) { memo.play(); if (other.src) other.play(); }
+    };
+    otherName = state.method === "memo" ? "" :
+      cfg.methods.find(function (m) { return m[0] === state.method; })[1];
+  }
+  // A method's name in a top corner of panel `b`, white on a dark box, at a
+  // fixed on-screen size, `u` canvas pixels per screen pixel. A label shows
+  // only on its method's side of the split line at `splitX`, so the line
+  // wipes it away as it crosses the box.
+  function label(text, b, right, u, splitX) {
+    ctx.font = "bold " + Math.round(15 * u) + "px system-ui, sans-serif";
+    var m = Math.round(6 * u), w = ctx.measureText(text).width + 2 * m, h = Math.round(24 * u);
+    var x = right ? b[0] + b[2] - w - m : b[0] + m, y = b[1] + m;
+    ctx.save();
+    if (splitX !== null) {
+      // Clear of the split line, which is drawn before the labels.
+      var edge = splitX + (right ? 1 : -1) * Math.round(3 * u) / 2;
+      ctx.beginPath();
+      ctx.rect(right ? edge : b[0], y, right ? b[0] + b[2] - edge : edge - b[0], h);
+      ctx.clip();
+    }
+    ctx.fillStyle = "rgba(0, 0, 0, 0.55)"; ctx.fillRect(x, y, w, h);
+    ctx.fillStyle = "#ffffff"; ctx.textBaseline = "middle"; ctx.fillText(text, x + m, y + h / 2);
+    ctx.restore();
+  }
+  function draw() {
+    if (visible && memo.readyState >= 2) {
+      // Once loaded, the baseline keeps its last frame while it seeks, so the
+      // split stays drawn.
+      var split = state.method !== "memo" && otherReady;
+      ctx.drawImage(split ? other : memo, 0, 0, memo.videoWidth, memo.videoHeight);
+      if (split) {
+        // Canvas pixels per screen pixel, so the line and handle keep their
+        // on-screen size whatever the video's resolution.
+        var s = canvas.width / (canvas.clientWidth || canvas.width);
+        panels().forEach(function (b) {
+          var w = Math.round(b[2] * state.split);
+          if (w > 0) ctx.drawImage(memo, b[0], b[1], w, b[3], b[0], b[1], w, b[3]);
+          // The Gaussian Wrapping page's comparison slider in its dark theme:
+          // a 3 px white line through the panel, and at its vertical middle a
+          // 40 px round handle, #1e293b with a 2 px #334155 border and a
+          // 0 2px 8px shadow, holding a 14 px light double arrow. A faint
+          // shadow keeps the line visible over the renders' white backgrounds.
+          var x = b[0] + w, lw = 3 * s, cy = b[1] + b[3] / 2, r = 20 * s;
+          ctx.save();
+          ctx.shadowColor = "rgba(0, 0, 0, 0.35)"; ctx.shadowBlur = 3 * s;
+          ctx.fillStyle = "rgba(255, 255, 255, 0.85)"; ctx.fillRect(x - lw / 2, b[1], lw, b[3]);
+          ctx.restore();
+          ctx.save();
+          ctx.shadowColor = "rgba(0, 0, 0, 0.6)"; ctx.shadowBlur = 8 * s; ctx.shadowOffsetY = 2 * s;
+          ctx.beginPath(); ctx.arc(x, cy, r - s, 0, 2 * Math.PI);
+          ctx.fillStyle = "#1e293b"; ctx.fill();
+          ctx.restore();
+          ctx.lineWidth = 2 * s; ctx.strokeStyle = "#334155"; ctx.stroke();
+          ctx.fillStyle = "#e2e8f0"; ctx.font = Math.round(14 * s) + "px system-ui, sans-serif";
+          ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText("↔", x, cy);
+          ctx.textAlign = "start";
+        });
+        // Small drift is taken up by the baseline's playback rate; only a
+        // large one, or a paused scrub, seeks.
+        var d = other.currentTime - memo.currentTime;
+        if (!other.seeking) {
+          if (Math.abs(d) > 0.5 || (memo.paused && Math.abs(d) > 0.02)) other.currentTime = memo.currentTime;
+          else other.playbackRate = state.rate * (d > 0.03 ? 0.9 : d < -0.03 ? 1.1 : 1);
+        }
+      }
+      // In every panel, MEMO, left of the split, in the top-left corner, and
+      // the compared method in the top-right.
+      var u = canvas.width / (canvas.clientWidth || canvas.width);
+      panels().forEach(function (b) {
+        var splitX = split ? b[0] + Math.round(b[2] * state.split) : null;
+        label("MEMO", b, false, u, splitX);
+        if (split) label(otherName, b, true, u, splitX);
+      });
+      if (memo.duration) scrub.value = 1000 * memo.currentTime / memo.duration;
+    }
+    requestAnimationFrame(draw);
+  }
+  // A drag follows the panel it started on and stops at that panel's edges,
+  // rather than wrapping around when it crosses into the next panel.
+  var dragged = null;
+  function setSplit(e) {
+    var r = canvas.getBoundingClientRect();
+    var x = (e.clientX - r.left) * canvas.width / r.width;
+    state.split = Math.min(Math.max((x - dragged[0]) / dragged[2], 0), 1);
+  }
+  canvas.addEventListener("pointerdown", function (e) {
+    var r = canvas.getBoundingClientRect();
+    var x = (e.clientX - r.left) * canvas.width / r.width;
+    var y = (e.clientY - r.top) * canvas.height / r.height;
+    dragged = panels().find(function (b) {
+      return x >= b[0] && x <= b[0] + b[2] && y >= b[1] && y <= b[1] + b[3];
+    }) || null;
+    if (dragged) setSplit(e);
+  });
+  window.addEventListener("pointermove", function (e) { if (dragged) setSplit(e); });
+  window.addEventListener("pointerup", function () { dragged = null; });
+  function menu(name, items, key, after) {
+    var bar = block.querySelector(".bar-" + name);
+    if (!bar || !items) return;
+    items.forEach(function (item) {
+      var b = document.createElement("button"); b.type = "button"; b.textContent = item[1];
+      b.addEventListener("click", function () {
+        state[key] = item[0];
+        bar.querySelectorAll("button").forEach(function (x) { x.classList.toggle("on", x === b); });
+        after();
+      });
+      if (state[key] === item[0]) b.classList.add("on");
+      bar.appendChild(b);
+    });
+  }
+  // MEMO is always on the left of the splits, so the menu lists only the
+  // methods compared with it.
+  menu("method", cfg.methods.filter(function (m) { return m[0] !== "memo"; }), "method", load);
+  menu("output", cfg.outputs, "output", load);
+  menu("level", cfg.levels.map(function (l) { return [l[1], l[0]]; }), "level", load);
+  menu("speed", [[1, "1×"], [0.5, "0.5×"], [0.25, "0.25×"]], "rate", function () {
+    [memo, other].forEach(function (v) { v.playbackRate = state.rate; });
+  });
+  var playButton = block.querySelector(".play");
+  playButton.addEventListener("click", function () {
+    wanted = memo.paused;
+    if (wanted) { memo.play(); if (other.src) other.play(); } else { memo.pause(); other.pause(); }
+  });
+  // The icon shows the action a click takes. The page's own loop passes
+  // through a brief pause at the wrap, which keeps the pause icon.
+  memo.addEventListener("play", function () {
+    playButton.innerHTML = "&#10074;&#8201;&#10074;"; playButton.setAttribute("aria-label", "Pause");
+  });
+  memo.addEventListener("pause", function () {
+    if (memo.ended) return;
+    playButton.innerHTML = "&#9654;"; playButton.setAttribute("aria-label", "Play");
+  });
+  scrub.addEventListener("input", function () {
+    if (memo.duration) { memo.currentTime = memo.duration * scrub.value / 1000; if (other.src) other.currentTime = memo.currentTime; }
+  });
+  // Full screen holds the whole player, its video scaled to the largest size
+  // that leaves room for the controls below it.
+  var fullButton = block.querySelector(".full");
+  function fit() {
+    var full = (document.fullscreenElement || document.webkitFullscreenElement) === block;
+    fullButton.textContent = full ? "Exit full screen" : "Full screen";
+    canvas.style.width = "";
+    if (!full) return;
+    var kids = block.children, rect = canvas.getBoundingClientRect();
+    var rest = kids[kids.length - 1].getBoundingClientRect().bottom - kids[0].getBoundingClientRect().top - rect.height;
+    var s = Math.min((block.clientWidth - 32) / canvas.width, (block.clientHeight - 32 - rest) / canvas.height);
+    canvas.style.width = Math.floor(canvas.width * s) + "px";
+  }
+  fullButton.addEventListener("click", function () {
+    if ((document.fullscreenElement || document.webkitFullscreenElement) === block) {
+      (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    } else {
+      (block.requestFullscreen || block.webkitRequestFullscreen).call(block);
+    }
+  });
+  document.addEventListener("fullscreenchange", fit);
+  document.addEventListener("webkitfullscreenchange", fit);
+  window.addEventListener("resize", fit);
+  new IntersectionObserver(function (entries) {
+    visible = entries[entries.length - 1].isIntersecting;
+    if (!visible) { memo.pause(); other.pause(); }
+    else if (!memo.src) load();
+    else if (wanted) { memo.play(); if (other.src) other.play(); }
+  }, {rootMargin: "100px 0px"}).observe(block);
+  requestAnimationFrame(draw);
+});
+</script>
+</body>
+</html>

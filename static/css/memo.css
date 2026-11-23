@@ -1,0 +1,52 @@
+/* MEMO's additions to the Academic Project Page Template's styles. Every
+   image, player, and canvas is capped at its column's width, so nothing
+   scrolls sideways on a phone. */
+
+/* Text one step larger than the template's 16 px, the title kept at its
+   template size. */
+html, body { font-size: 18px; }
+body { font-family: "Inter", system-ui, sans-serif; }
+.title.is-1.publication-title { font-size: 48px; }
+img, video, canvas { max-width: 100%; }
+.publication-title a.memo-home { color: inherit; }
+
+.section h2.title { text-align: center; }
+.bibtex-header { justify-content: center; gap: 1rem; }
+.publication-links { margin-top: 1rem; }
+.publication-links .link-block { display: inline-block; margin: 0.25rem; }
+.publication-links .button { font-weight: 700; }
+
+.memo-teaser { margin-top: 2rem; line-height: 0; }
+.memo-teaser img { display: block; width: 100%; height: auto; }
+
+.memo-figure { margin: 0 0 1.5rem; }
+.memo-figure img { display: block; width: 100%; height: auto; margin: 0 auto; }
+.memo-figure.narrow img { max-width: 640px; }
+/* Captions in smaller text and as wide as their figure, so they read as
+   captions rather than body text. */
+.memo-figure figcaption { margin: 0.75rem auto 0; font-size: 0.85rem; text-align: justify; }
+.memo-figure.narrow figcaption { max-width: 640px; }
+.memo-figure figcaption.short { text-align: center; }
+
+
+#mesh-viewer { margin-top: 2rem; }
+.viewer-scenes { margin-bottom: 0.5rem; }
+.viewer-scenes button { font: inherit; font-size: 0.9rem; font-weight: 700; padding: 2px 12px; margin: 0 6px 6px 0; border: 1px solid #999999; border-radius: 4px; background: #ffffff; color: #1a1a1a; cursor: pointer; }
+.viewer-scenes button.on { background: var(--primary-color); color: #ffffff; border-color: var(--primary-color); }
+.viewer-stage { position: relative; width: 100%; background: #ffffff; border: 1px solid #dbdbdb; touch-action: none; color: #4a4a4a; }
+.viewer-stage:not(:has(canvas)) { padding: 2rem 1rem; text-align: center; }
+.viewer-stage canvas { display: block; width: 100%; }
+.viewer-time { display: flex; align-items: center; gap: 12px; margin-top: 0.5rem; }
+.viewer-time input[type=range] { flex: 1; }
+.viewer-frame { min-width: 6em; font-weight: 700; font-variant-numeric: tabular-nums; }
+.viewer-status { color: #4a4a4a; font-size: 0.9rem; min-height: 1.5em; }
+.viewer-note { font-size: 0.85rem; text-align: justify; }
+
+ul.intro { font-size: 1.1rem; }
+.memo-nav a { margin-right: 1rem; }
+.compare { margin-bottom: 1.5rem; }
+/* The player's own rules come later in the page and set fixed pixel sizes
+   and a black selection, so these overrides carry one more selector. */
+body .compare .bar, body .compare .bar button { font-size: 16px; }
+body .compare .bar button { font-weight: 700; }
+body .compare .bar button.on { background: var(--primary-color); border-color: var(--primary-color); color: #ffffff; }
