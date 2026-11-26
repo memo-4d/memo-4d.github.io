@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="static/css/bulma.min.css">
 <link rel="stylesheet" href="static/css/index.css">
-<link rel="stylesheet" href="static/css/memo.css?v=b39da9679c">
+<link rel="stylesheet" href="static/css/memo.css?v=08786f9106">
 <script defer src="static/js/fontawesome.all.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
@@ -24,7 +24,7 @@
 <h1 class="title is-1 publication-title"><a href="index.html" class="memo-home">A Mesh for Every Moment</a></h1>
 <div class="is-size-5 publication-authors"><span class="author-block"><a href="https://homes.cs.washington.edu/~royorel/" target="_blank">Roy Or-El</a><sup>1</sup></span> &nbsp; <span class="author-block"><a href="https://jjparkcv.github.io/" target="_blank">Jeong Joon Park</a><sup>2</sup></span> &nbsp; <span class="author-block"><a href="https://www.irakemelmacher.com/" target="_blank">Ira Kemelmacher-Shlizerman</a><sup>1</sup></span></div>
 <div class="is-size-5 publication-authors"><span class="author-block"><sup>1</sup>University of Washington</span> &nbsp; <span class="author-block"><sup>2</sup>University of Michigan</span></div>
-<div class="publication-links"><span class="link-block"><a href="https://github.com/royorel/MEMO" target="_blank" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a></span><span class="link-block"><a href="https://github.com/royorel/Blender-Moments" target="_blank" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-database"></i></span><span>Dataset</span></a></span><span class="link-block"><a href="comparisons.html" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-film"></i></span><span>Comparison Videos</span></a></span></div>
+<div class="publication-links"><span class="link-block"><a href="https://arxiv.org/abs/2611.34939" target="_blank" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span></a></span><span class="link-block"><a href="https://github.com/royorel/MEMO" target="_blank" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a></span><span class="link-block"><a href="https://github.com/royorel/Blender-Moments" target="_blank" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-database"></i></span><span>Dataset</span></a></span><span class="link-block"><a href="comparisons.html" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-film"></i></span><span>Comparison Videos</span></a></span></div>
 <div class="memo-teaser"><img src="teaser/elephant.gif" alt="Elephant: render, shaded mesh, and mesh normals"><img src="teaser/alligator.gif" alt="Alligator: render, shaded mesh, and mesh normals"><img src="teaser/beetle.gif" alt="Beetle: render, shaded mesh, and mesh normals"></div>
 </div>
 </div>
@@ -98,6 +98,29 @@
 </div>
 </div>
 </section>
+<section class="section" id="BibTeX">
+<div class="container is-max-desktop content">
+<h2 class="title">BibTeX</h2>
+<div class="bibtex-box">
+<button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard"><i class="fas fa-copy"></i> <span class="copy-text">Copy</span></button>
+<pre id="bibtex-code"><code>@article{orel2026memo,
+  title   = {A Mesh for Every Moment},
+  author  = {Or-El, Roy and Park, Jeong Joon and Kemelmacher-Shlizerman, Ira},
+  journal = {arXiv preprint arXiv:2611.34939},
+  year    = {2026}
+}</code></pre>
+</div>
+</div>
+</section>
+<script>
+function copyBibTeX() {
+  var code = document.getElementById("bibtex-code"), label = document.querySelector(".copy-bibtex-btn .copy-text");
+  navigator.clipboard.writeText(code.textContent).then(function () {
+    label.textContent = "Copied";
+    setTimeout(function () { label.textContent = "Copy"; }, 2000);
+  });
+}
+</script>
 <footer class="footer">
 <div class="container"><div class="columns is-centered"><div class="column is-8"><div class="content">
 <p>This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.

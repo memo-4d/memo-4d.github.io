@@ -11,7 +11,11 @@ img, video, canvas { max-width: 100%; }
 .publication-title a.memo-home { color: inherit; }
 
 .section h2.title { text-align: center; }
-.bibtex-header { justify-content: center; gap: 1rem; }
+/* The copy button in the BibTeX box's top-right corner, over the code. */
+.bibtex-box { position: relative; }
+.bibtex-box .copy-bibtex-btn { position: absolute; top: 0.6rem; right: 0.6rem; z-index: 1;
+  padding: 0.4rem 0.75rem; font-size: 0.8rem; }
+.bibtex-box pre { padding-top: 3rem; }
 .publication-links { margin-top: 1rem; }
 .publication-links .link-block { display: inline-block; margin: 0.25rem; }
 .publication-links .button { font-weight: 700; }
